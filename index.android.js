@@ -5,6 +5,10 @@
 'use strict';
 
 var React = require('react-native');
+//var Router = require('gb-native-router');
+var SessionStore = require('./js/store/SessionStore.js');
+
+
 var {
   AppRegistry,
   StyleSheet,
@@ -12,20 +16,19 @@ var {
   View,
 } = React;
 
+
+/*var firstRoute = {
+  name: 'Welcome!',
+  component: HelloPage
+};*/
+
 var Blinkx = React.createClass({
+  componentDidMount : function () {
+    console.log(SessionStore);
+  },
   render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Text>Test</Text>
     );
   }
 });
